@@ -6,8 +6,13 @@ export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const study = caseStudies.find((s) => s.slug === params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const study = caseStudies.find((s) => s.slug === slug);
   if (!study) return {};
   return {
     title: `${study.title} | Abby Wyant`,
@@ -15,12 +20,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function CaseStudyPage({
+export default async function CaseStudyPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const study = caseStudies.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const study = caseStudies.find((s) => s.slug === slug);
   if (!study) notFound();
 
   return (
