@@ -6,7 +6,17 @@ const experiences = [
       {
         title: "Principal Product Manager",
         period: "December 2024 - Present",
-        highlights: [],
+        highlights: [
+          "Led the platform team, shipping a public REST API suite from zero to 20+ endpoints and 10+ customers in under 6 months",
+          "Defined the strategy, roadmap, and workstream for a new foodservice vertical, managing the first client engagement end-to-end",
+          "Led quarterly product planning across all product teams, partnering directly with the VP of Engineering, VP of Product, and VP of Implementations",
+          "Revamped the promotion planning interface (50k+ users), the platform's highest-traffic experience",
+          "Built out data pipelines, client-facing dashboards, and ROI reporting, along with critical workflows including hierarchy management and insights",
+          "Improved team delivery rate from 30% to 80% per quarter",
+          "Unblocked stalled initiatives with 1+ year of prior work, delivering within 3 months of taking ownership",
+          "Mentored and managed two PMs across mid and senior levels",
+          "Partnered with Sales as a product advisor, joining client onsites and the annual sales offsite to shape go-to-market strategy",
+        ],
       },
     ],
   },
