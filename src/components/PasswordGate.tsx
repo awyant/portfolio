@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import RunnerGame from "./RunnerGame";
 
-const SITE_PASSWORD = "Cheddar";
+const SITE_PASSWORD = process.env.NEXT_PUBLIC_SITE_PASSWORD ?? "";
 
 export default function PasswordGate({
   children,
