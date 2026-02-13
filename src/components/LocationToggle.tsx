@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const locations = [
   { city: "Brooklyn", region: "NY" },
-  { city: "Maine", region: "ME" },
+  { city: "Portland", region: "ME" },
 ];
 
 export default function LocationToggle() {
