@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
+import TagList from "@/components/TagList";
+import BulletList from "@/components/BulletList";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -43,16 +45,7 @@ export default async function CaseStudyPage({
       </nav>
 
       <article className="mx-auto max-w-3xl px-6 pb-24 pt-28">
-        <div className="mb-3 flex flex-wrap gap-2">
-          {study.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-accent/10 px-3 py-0.5 text-xs font-medium text-accent"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <TagList tags={study.tags} />
 
         <h1 className="mb-2 text-4xl font-bold tracking-tight">
           {study.title}
@@ -74,28 +67,22 @@ export default async function CaseStudyPage({
           <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
             The Approach
           </h2>
-          <ul className="space-y-3">
-            {study.approach.map((step, i) => (
-              <li key={i} className="flex items-start gap-3 text-muted leading-relaxed">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                {step}
-              </li>
-            ))}
-          </ul>
+          <BulletList
+            items={study.approach}
+            className="space-y-3"
+            itemClassName="flex items-start gap-3 text-muted leading-relaxed"
+          />
         </section>
 
         <section className="mb-12">
           <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
             The Outcome
           </h2>
-          <ul className="space-y-3">
-            {study.outcome.map((result, i) => (
-              <li key={i} className="flex items-start gap-3 text-muted leading-relaxed">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                {result}
-              </li>
-            ))}
-          </ul>
+          <BulletList
+            items={study.outcome}
+            className="space-y-3"
+            itemClassName="flex items-start gap-3 text-muted leading-relaxed"
+          />
         </section>
 
         <section className="mb-12">

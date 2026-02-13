@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
+import SectionHeader from "./SectionHeader";
+import TagList from "./TagList";
 
 const upcomingProjects = [
   {
@@ -14,12 +16,7 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-20 py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
-          Projects
-        </h2>
-        <h3 className="mb-12 text-3xl font-bold tracking-tight">
-          Things I&apos;ve built
-        </h3>
+        <SectionHeader label="Projects" title="Things I've built" />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((study) => (
@@ -28,16 +25,7 @@ export default function Projects() {
               href={`/projects/${study.slug}`}
               className="group flex flex-col rounded-xl border border-border p-6 transition-colors hover:border-accent/30"
             >
-              <div className="mb-3 flex flex-wrap gap-2">
-                {study.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-accent/10 px-3 py-0.5 text-xs font-medium text-accent"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <TagList tags={study.tags} />
               <h4 className="mb-2 text-lg font-semibold">{study.title}</h4>
               <p className="mb-4 flex-1 text-sm leading-relaxed text-muted">
                 {study.summary}
@@ -53,16 +41,7 @@ export default function Projects() {
               key={index}
               className="flex flex-col rounded-xl border border-border p-6"
             >
-              <div className="mb-3 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-accent/10 px-3 py-0.5 text-xs font-medium text-accent"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <TagList tags={project.tags} />
               <h4 className="mb-2 text-lg font-semibold">{project.title}</h4>
               <p className="mb-4 flex-1 text-sm leading-relaxed text-muted">
                 {project.description}

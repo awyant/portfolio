@@ -1,15 +1,12 @@
 import { experiences } from "@/data/experiences";
+import SectionHeader from "./SectionHeader";
+import BulletList from "./BulletList";
 
 export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-20 bg-card py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
-          Product Experience
-        </h2>
-        <h3 className="mb-12 text-3xl font-bold tracking-tight">
-          10+ years of shipping products at startups
-        </h3>
+        <SectionHeader label="Product Experience" title="10+ years of shipping products at startups" />
 
         <div className="space-y-12">
           {experiences.map((exp, expIndex) => (
@@ -33,17 +30,7 @@ export default function Experience() {
                       <span className="text-sm text-muted">{role.period}</span>
                     </div>
                     {role.highlights.length > 0 && (
-                      <ul className="mt-2 space-y-1">
-                        {role.highlights.map((highlight, i) => (
-                          <li
-                            key={i}
-                            className="flex items-start gap-2 text-sm text-muted"
-                          >
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
+                      <BulletList items={role.highlights} className="mt-2 space-y-1" />
                     )}
                   </div>
                 ))}

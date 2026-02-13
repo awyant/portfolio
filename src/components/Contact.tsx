@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 const socialLinks = [
   {
     label: "LinkedIn",
@@ -33,12 +35,7 @@ export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-20 py-24">
       <div className="mx-auto max-w-5xl px-6 text-center">
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
-          Contact
-        </h2>
-        <h3 className="mb-6 text-3xl font-bold tracking-tight">
-          Let&apos;s connect
-        </h3>
+        <SectionHeader label="Contact" title="Let's connect" className="mb-6" />
         <p className="mx-auto mb-10 max-w-md text-muted leading-relaxed">
           I&apos;m always open to discussing product roles, AI projects, or
           creative collaborations. Feel free to reach out.

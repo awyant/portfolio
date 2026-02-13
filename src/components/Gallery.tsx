@@ -1,15 +1,11 @@
 import { galleryItems } from "@/data/gallery";
+import SectionHeader from "./SectionHeader";
 
 export default function Gallery() {
   return (
     <section id="gallery" className="scroll-mt-20 bg-card py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
-          Gallery
-        </h2>
-        <h3 className="mb-12 text-3xl font-bold tracking-tight">
-          Art &amp; Hobbies
-        </h3>
+        <SectionHeader label="Gallery" title="Art & Hobbies" />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {galleryItems.map((item, index) => (
