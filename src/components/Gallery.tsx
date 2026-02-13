@@ -1,25 +1,4 @@
-const galleryItems = [
-  {
-    title: "Art Piece One",
-    category: "Art",
-    placeholder: "Your artwork or photo here",
-  },
-  {
-    title: "Creative Project",
-    category: "Hobby",
-    placeholder: "Your creative project here",
-  },
-  {
-    title: "Art Piece Two",
-    category: "Art",
-    placeholder: "Your artwork or photo here",
-  },
-  {
-    title: "Side Project",
-    category: "Hobby",
-    placeholder: "Your side project here",
-  },
-];
+import { galleryItems } from "@/data/gallery";
 
 export default function Gallery() {
   return (
