@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
           "Led the platform team, shipping a public REST API suite from zero to 20+ endpoints and 10+ customers in under 6 months",
           "Defined the strategy, roadmap, and workstream for a new foodservice vertical, managing the first client engagement end-to-end",
           "Led quarterly product planning across all product teams, partnering directly with the VP of Engineering, VP of Product, and VP of Implementations",
-          "Revamped the promotion planning interface (50k+ users), the platform's highest-traffic experience",
+          "Revamped the promotion planning interface (30k+ views per month), the platform's highest-traffic experience",
           "Built out data pipelines, client-facing dashboards, and ROI reporting, along with critical workflows including hierarchy management and insights",
           "Improved team delivery rate from 30% to 80% per quarter",
           "Unblocked stalled initiatives with 1+ year of prior work, delivering within 3 months of taking ownership",
